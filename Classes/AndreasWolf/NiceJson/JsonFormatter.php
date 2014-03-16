@@ -14,7 +14,7 @@ class JsonFormatter {
   *        and should be converted to JSON first of all.
   * @return string Indented version of the original JSON string
   */
-  function json_format($json) {
+  public static function json_format($json) {
     if (!is_string($json)) {
       if (phpversion() && phpversion() >= 5.4) {
         return json_encode($json, JSON_PRETTY_PRINT);
