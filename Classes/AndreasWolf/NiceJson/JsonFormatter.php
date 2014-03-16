@@ -12,9 +12,10 @@ class JsonFormatter {
 	 * @param string $json The original JSON string to process
 	 *        When the input is not a string it is assumed the input is RAW
 	 *        and should be converted to JSON first of all.
+	 * @param string $indentStr The indentation character(s)
 	 * @return string Indented version of the original JSON string
 	 */
-	public static function json_format($json) {
+	public static function json_format($json, $indentStr = "\t") {
 		if (!is_string($json)) {
 			if (phpversion() && phpversion() >= 5.4) {
 				return json_encode($json, JSON_PRETTY_PRINT);
@@ -24,7 +25,6 @@ class JsonFormatter {
 		$result      = '';
 		$pos         = 0;               // indentation level
 		$strLen      = strlen($json);
-		$indentStr   = "\t";
 		$newLine     = "\n";
 		$prevChar    = '';
 		$outOfQuotes = true;
