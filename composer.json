@@ -1,0 +1,13 @@
+{
+    "name": "andreaswolf/nicejson-php",
+    "description": "A JSON formatting utility (not only) for PHP < 5.4",
+    "authors": [
+        {
+            "name": "Andreas Wolf",
+            "email": "aw@foundata.net"
+        }
+    ],
+    "require": {
+
+    }
+}
